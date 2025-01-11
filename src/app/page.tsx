@@ -20,7 +20,13 @@ export default function Home() {
       </div>
 
       <div className="w-full flex justify-center mt-[-110px]">
-        <Image src="nikola.png" alt="Image" className="w-full h-auto" />
+        <Image
+          src="/nikola.png"
+          alt="Image"
+          className="w-full h-auto"
+          width={800}
+          height={900}
+        />
       </div>
 
       <footer className="w-full flex gap-2.5 justify-center mb-2.5 mt-[-80px]">
