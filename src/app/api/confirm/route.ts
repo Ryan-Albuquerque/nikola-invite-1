@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { connectToDataBase } from "@/db/db";
 import User from "@/db/models/user";
 

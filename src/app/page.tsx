@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
       </div>
 
       <div className="w-full flex justify-center mt-[-110px]">
-        <img src="nikola.png" alt="Image" className="w-full h-auto" />
+        <Image src="nikola.png" alt="Image" className="w-full h-auto" />
       </div>
 
       <footer className="w-full flex gap-2.5 justify-center mb-2.5 mt-[-80px]">
