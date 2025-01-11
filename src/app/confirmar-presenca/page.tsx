@@ -43,7 +43,7 @@ export default function ConfirmarPresenca() {
               });
               const result = await request.text();
               alert(result);
-              if (request.status == 200) {
+              if (request.status == 400 || request.status == 200) {
                 window.location.href = `https://api.whatsapp.com/send?phone=5592984551334&text=Ol%C3%A1%20Ryan%20e%20Laura.%20%0AAgrade%C3%A7o%20o%20convite. Eu ${guest} confirmo%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20do%20Nikola%20no%20dia%208%20de%20fevereiro%20as%2012%3A00%20no%20Condom%C3%ADnio%20Bosque%20dos%20Ingleses%20%F0%9F%A4%A0%F0%9F%91%A9%E2%80%8D%F0%9F%9A%80`;
               }
             }}
