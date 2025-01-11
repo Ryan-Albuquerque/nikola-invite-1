@@ -2,10 +2,9 @@
 
 import { connectToDataBase } from "@/db/db";
 import User from "@/db/models/user";
+import { NextRequest } from "next/server";
 
-export async function POST(request: {
-  json: () => PromiseLike<{ guest: any }> | { guest: any };
-}) {
+export async function POST(request: Request | NextRequest) {
   try {
     await connectToDataBase();
 
