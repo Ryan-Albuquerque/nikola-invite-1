@@ -23,9 +23,17 @@ export default function Presentes() {
           <button className="ml-2 p-2 bg-amber-500 text-white rounded-md w-[80%] font-bold">
             BP KIDS
           </button>
-          <button className="ml-2 p-2 bg-red-500 text-white rounded-md w-[80%] font-bold">
-            Toy Store Brinquedos
-          </button>
+          <a
+            className="w-full"
+            href={
+              "https://drive.google.com/file/d/1CHKpgiKihd2SUxy-3bQdMN8U6HPlWtxL/view?usp=sharing"
+            }
+            target="_blank"
+          >
+            <button className="ml-2 p-2 bg-red-500 text-white rounded-md w-[80%] font-bold">
+              Toy Store Brinquedos
+            </button>
+          </a>
         </div>
       </div>
     </div>
