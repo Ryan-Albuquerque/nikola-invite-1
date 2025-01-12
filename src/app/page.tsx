@@ -33,6 +33,7 @@ export default function Home() {
         <Image
           src="/nikola.png"
           alt="Image"
+          priority
           className="w-full h-auto  md:mx-[48rem] md:h-[1024px]"
           width={800}
           height={900}
