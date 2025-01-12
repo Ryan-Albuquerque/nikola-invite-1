@@ -19,7 +19,7 @@ export default function Home() {
         </video>
       </div>
 
-      <div className="w-full flex justify-center mt-[-110px]">
+      <div className="w-full flex justify-center mt-[-150px] z-10">
         <Image
           src="/nikola.png"
           alt="Image"
@@ -29,7 +29,7 @@ export default function Home() {
         />
       </div>
 
-      <footer className="w-full flex gap-2.5 justify-center mb-2.5 mt-[-80px]">
+      <footer className="w-full flex gap-2.5 justify-center mb-2.5 mt-[-80px] z-10">
         <button
           className="px-2.5 py-2.5 text-lg cursor-pointer rounded-lg border-2 border-amber-500 text-black"
           onClick={() => router.push("/presentes")}
