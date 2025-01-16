@@ -1,3 +1,12 @@
+import {
+  AlertDialogHeader,
+  AlertDialogFooter,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogContent,
+  AlertDialog,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,9 +29,35 @@ export default function Presentes() {
           </Link>
         </nav>
         <div className="my-28 px-2 flex w-full flex-col text-center items-center gap-5">
-          <button className="ml-2 p-2 bg-amber-500 text-white rounded-md w-[80%] font-bold">
-            BP KIDS
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button className="ml-2 p-2 bg-amber-500 text-white rounded-md w-[80%] font-bold">
+                Locomotiva Brinquedos
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle hidden></AlertDialogTitle>
+                <AlertDialogDescription className="text-lg">
+                  Ao chegar no local busque por lista de presentes do Nikola
+                  Francisco com os pais Laura e Ryan Albuquerque
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <button className="bg-green-500 w-full text-white py-1 rounded-md">
+                  <a
+                    className="w-full"
+                    href={
+                      "https://www.google.com/maps/dir/current+location/Locomotiva+Brinquedos,Manaus"
+                    }
+                    target="_blank"
+                  >
+                    Continuar
+                  </a>
+                </button>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
           <a
             className="w-full"
             href={

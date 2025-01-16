@@ -51,7 +51,7 @@ export default function ConfirmarPresenca() {
               }
             }}
           >
-            Confirmar
+            {!isLoading ? "Confirmar" : "Carregando"}
           </button>
         </div>
       </div>

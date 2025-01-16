@@ -1,4 +1,13 @@
 "use client";
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -50,37 +59,69 @@ export default function Home() {
             className="md:w-[130px]"
           />
         </button>
-        <button
-          onClick={() => {
-            alert(
-              "Ao chegar, informe que irá a churrasqueira 2 na reserva de Shirley Domingues!"
-            );
-            window.location.href =
-              "https://www.google.com/maps/dir/current+location/Condominio+Bosque+dos+Ingleses,Manaus";
-          }}
-        >
-          <Image
-            src={"/local.png"}
-            height={70}
-            width={70}
-            alt=""
-            className="md:w-[100px]"
-          />
-        </button>
-        <button
-          onClick={() => {
-            alert("⚠ Lembrando que convidado não convida, obrigado :) ⚠");
-            router.push("/confirmar-presenca");
-          }}
-        >
-          <Image
-            src={"/presenca.png"}
-            height={90}
-            width={90}
-            alt=""
-            className="md:w-[120px]"
-          />
-        </button>
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Image
+              src={"/local.png"}
+              height={70}
+              width={70}
+              alt=""
+              className="md:w-[100px]"
+            />
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle hidden></AlertDialogTitle>
+              <AlertDialogDescription className="text-lg">
+                Ao chegar, informe que irá a churrasqueira 2 na reserva de
+                Shirley Domingues!
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <button className="bg-green-500 w-full text-white py-1 rounded-md">
+                <a
+                  className="w-full bg-green-500"
+                  href={
+                    "https://www.google.com/maps/dir/current+location/Condominio+Bosque+dos+Ingleses,Manaus"
+                  }
+                  target="_blank"
+                >
+                  Continuar
+                </a>
+              </button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Image
+              src={"/presenca.png"}
+              height={90}
+              width={90}
+              alt=""
+              className="md:w-[120px]"
+            />
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle hidden></AlertDialogTitle>
+              <AlertDialogDescription className="text-lg">
+                ⚠ Lembrando que convidado não convida, obrigado :) ⚠
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <button className="bg-green-500 w-full text-white py-1 rounded-md">
+                <button
+                  onClick={() => {
+                    router.push("/confirmar-presenca");
+                  }}
+                >
+                  Continuar
+                </button>
+              </button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
       </footer>
     </div>
   );
