@@ -110,14 +110,13 @@ export default function Home() {
               </DialogDescription>
             </DialogHeader>
             <DialogFooter>
-              <button className="bg-green-500 w-full text-white py-1 rounded-md">
-                <button
-                  onClick={() => {
-                    router.push("/confirmar-presenca");
-                  }}
-                >
-                  Continuar
-                </button>
+              <button
+                className="bg-green-500 w-full text-white py-1 rounded-md"
+                onClick={() => {
+                  router.push("/confirmar-presenca");
+                }}
+              >
+                Continuar
               </button>
             </DialogFooter>
           </DialogContent>
