@@ -1,12 +1,12 @@
 import {
-  AlertDialogHeader,
-  AlertDialogFooter,
-  AlertDialogTitle,
-  AlertDialogDescription,
-  AlertDialogContent,
-  AlertDialog,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+  DialogDescription,
+  DialogContent,
+  Dialog,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,35 +29,35 @@ export default function Presentes() {
           </Link>
         </nav>
         <div className="my-28 px-2 flex w-full flex-col text-center items-center gap-5">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
+          <Dialog>
+            <DialogTrigger asChild>
               <button className="ml-2 p-2 bg-amber-500 text-white rounded-md w-[80%] font-bold">
                 Locomotiva Brinquedos
               </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle hidden></AlertDialogTitle>
-                <AlertDialogDescription className="text-lg">
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle hidden></DialogTitle>
+                <DialogDescription className="text-lg text-black">
                   Ao chegar no local busque por lista de presentes do Nikola
                   Francisco com os pais Laura e Ryan Albuquerque
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <button className="bg-green-500 w-full text-white py-1 rounded-md">
-                  <a
-                    className="w-full"
-                    href={
-                      "https://www.google.com/maps/dir/current+location/Locomotiva+Brinquedos,Manaus"
-                    }
-                    target="_blank"
-                  >
+                </DialogDescription>
+              </DialogHeader>
+              <DialogFooter>
+                <a
+                  className="w-full block"
+                  href={
+                    "https://www.google.com/maps/dir/current+location/Locomotiva+Brinquedos,Manaus"
+                  }
+                  target="_blank"
+                >
+                  <button className="bg-green-500 w-full text-white py-1 rounded-md">
                     Continuar
-                  </a>
-                </button>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+                  </button>
+                </a>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
           <a
             className="w-full"
             href={

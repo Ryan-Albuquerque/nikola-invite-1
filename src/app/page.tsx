@@ -1,13 +1,13 @@
 "use client";
 import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -59,8 +59,8 @@ export default function Home() {
             className="md:w-[130px]"
           />
         </button>
-        <AlertDialog>
-          <AlertDialogTrigger asChild>
+        <Dialog>
+          <DialogTrigger asChild>
             <Image
               src={"/local.png"}
               height={70}
@@ -68,32 +68,32 @@ export default function Home() {
               alt=""
               className="md:w-[100px]"
             />
-          </AlertDialogTrigger>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle hidden></AlertDialogTitle>
-              <AlertDialogDescription className="text-lg">
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle hidden></DialogTitle>
+              <DialogDescription className="text-lg text-black">
                 Ao chegar, informe que irá a churrasqueira 2 na reserva de
                 Shirley Domingues!
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <button className="bg-green-500 w-full text-white py-1 rounded-md">
-                <a
-                  className="w-full bg-green-500"
-                  href={
-                    "https://www.google.com/maps/dir/current+location/Condominio+Bosque+dos+Ingleses,Manaus"
-                  }
-                  target="_blank"
-                >
+              </DialogDescription>
+            </DialogHeader>
+            <DialogFooter>
+              <a
+                className="w-full block"
+                href={
+                  "https://www.google.com/maps/dir/current+location/Condominio+Bosque+dos+Ingleses,Manaus"
+                }
+                target="_blank"
+              >
+                <button className="bg-green-500 w-full text-white py-1 rounded-md">
                   Continuar
-                </a>
-              </button>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
-        <AlertDialog>
-          <AlertDialogTrigger asChild>
+                </button>
+              </a>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+        <Dialog>
+          <DialogTrigger asChild>
             <Image
               src={"/presenca.png"}
               height={90}
@@ -101,15 +101,15 @@ export default function Home() {
               alt=""
               className="md:w-[120px]"
             />
-          </AlertDialogTrigger>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle hidden></AlertDialogTitle>
-              <AlertDialogDescription className="text-lg">
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle hidden></DialogTitle>
+              <DialogDescription className="text-lg text-black">
                 ⚠ Lembrando que convidado não convida, obrigado :) ⚠
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
+              </DialogDescription>
+            </DialogHeader>
+            <DialogFooter>
               <button className="bg-green-500 w-full text-white py-1 rounded-md">
                 <button
                   onClick={() => {
@@ -119,9 +119,9 @@ export default function Home() {
                   Continuar
                 </button>
               </button>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </footer>
     </div>
   );
